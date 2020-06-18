@@ -4,7 +4,6 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
-  - heroku config:set DEBUG_COLLECTSTATIC=1
   - heroku run python manage.py migrate
   - heroku run python manage.py makemigrations dashboard
 # command to run tests
