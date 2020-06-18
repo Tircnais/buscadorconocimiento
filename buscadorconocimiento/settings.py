@@ -17,6 +17,9 @@ from django.urls import reverse_lazy
 # Database para deploy
 import dj_database_url
 from decouple import config
+import django_heroku
+django_heroku.settings(locals())
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -162,8 +165,7 @@ STATICFILES_DIRS = (
 
 # Para deploy
 # Obligatoria si se quiere mostrar imagenes, arch, css QUE SEAN staticos
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # a donde va luego del logeo (no redirecciona -no va a la url-)
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 # a donde va luego de salir
