@@ -178,4 +178,4 @@ EMAIL_HOST_USER = 'tircnais.ca@gmail.com' #correo del que envia
 EMAIL_HOST_PASSWORD = 'yoco540152' #clave
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'Equipo del sitio <noreply@example.com>'
+# DEFAULT_FROM_EMAIL = 'Equipo del sitio <noreply@example.com>'
