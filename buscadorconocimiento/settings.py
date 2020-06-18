@@ -14,7 +14,9 @@ import os
 
 # para el redireccionamiento (login, logout)
 from django.urls import reverse_lazy
-
+# Database para deploy
+import dj_database_url
+from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -79,11 +81,8 @@ WSGI_APPLICATION = 'buscadorconocimiento.wsgi.application'
 
 # aki se pone la DB a usar
 # DEPLOY
-import dj_database_url
-from decouple import config
 DATABASES = {
-    'default': dj_database_url.config(default=config('JAWSDB_MARIA_URL')
-        # JAWSDB_MARIA_URL
+    'default': dj_database_url.config(default=config('DATABASE_URL')
         # DATABASE_URL='mysql://qbg29146cfdcrd04:y7lckt0y8ym1pxwq@un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gl5cx6pynoe5fx9y'
     )
 }
@@ -91,16 +90,16 @@ DATABASES = {
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'digcomp',
-        'USER': 'desarrollador',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1', #x defecto (localhost)
-        'PORT': 5432,
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'digcomp',
+#         'USER': 'desarrollador',
+#         'PASSWORD': '1234',
+#         'HOST': '127.0.0.1', #x defecto (localhost)
+#         'PORT': 5432,
+#     }
+# }
 
 # MODULO para el API REST# 
 REST_FRAMEWORK = {
