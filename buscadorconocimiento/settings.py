@@ -66,7 +66,7 @@ ROOT_URLCONF = 'buscadorconocimiento.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,7 +85,6 @@ WSGI_APPLICATION = 'buscadorconocimiento.wsgi.application'
 # DEPLOY
 DATABASES = {
     'default': dj_database_url.config(default=config('DATABASE_URL')
-        # DATABASE_URL='mysql://qbg29146cfdcrd04:y7lckt0y8ym1pxwq@un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gl5cx6pynoe5fx9y'
     )
 }
 
