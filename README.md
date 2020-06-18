@@ -41,9 +41,11 @@ En su sitio se puede elegir cual rama desplegar
 1. heroku login
 
 ## Create App
-python manage.py collectstatic --noinput
+1. Subiendo cambio directo a HEROKU (se debe subir primero a git)
+	git push heroku master
+	- python manage.py collectstatic --noinput
 	
-1. disable the collectstatic during a deploy
+2. disable the collectstatic during a deploy
 
 DEBUG_COLLECTSTATIC
 
@@ -52,15 +54,12 @@ Disabling Collectstatic
 
 	heroku config:set DISABLE_COLLECTSTATIC=1
 	_ heroku config:set DISABLE_COLLECTSTATIC=0
-2.   deploy
-
-	git push heroku master
 
 3.  run migrations (django 1.10 added at least one)
 
 	heroku run python manage.py migrate
 	- heroku run python manage.py shell
-	- heroku run python manage.py makemigrations servidor
+	- heroku run python manage.py makemigrations dashboard
 
 4.  run collectstatic using bower (optional)
 
