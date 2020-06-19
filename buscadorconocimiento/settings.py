@@ -154,7 +154,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 # DEJAR LOS STATIC asi para el DEPLOY
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = 'https://buscadorconocimiento.herokuapp.com/static/'
 # Extra places for collectstatic to find static files.
 # # PARA LA CARPETA STATIC
 STATICFILES_DIRS = (
