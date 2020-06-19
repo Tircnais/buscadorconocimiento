@@ -84,10 +84,9 @@ WSGI_APPLICATION = 'buscadorconocimiento.wsgi.application'
 # aki se pone la DB a usar
 # DEPLOY
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://acddzezfhpojyh:ffdc04dc08a03506bca7b7e0e40f4b9a1dd30c9239a9cc9c13f954067e30b437@ec2-52-20-248-222.compute-1.amazonaws.com:5432/dbubo49768anj6'
+    'default': dj_database_url.config(default='postgres://sjjhymirfqxeaz:54d72399e501472ec5cb68ae2dbc988ff71f5c7e7d98731364983bf29dea8e91@ec2-52-20-248-222.compute-1.amazonaws.com:5432/d851jcejapupt6'
     )
 }
-# DATABASES['default'] = dj_database_url.config(default='postgres://acddzezfhpojyh:ffdc04dc08a03506bca7b7e0e40f4b9a1dd30c9239a9cc9c13f954067e30b437@ec2-52-20-248-222.compute-1.amazonaws.com:5432/dbubo49768anj6')
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
