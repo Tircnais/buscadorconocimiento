@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'corsheaders', # Para Deploy
+    'rest_framework', # API
     'dashboard', # panel (registro)
     'buscador'
 
@@ -58,7 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware', #Associates users with requests using sessions.
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # PAra el DESPLIGUE
+    'whitenoise.middleware.WhiteNoiseMiddleware', # Para el DESPLIGUE
+    'corsheaders.middleware.CorsMiddleware', # Para Deploy
+    'django.middleware.common.CommonMiddleware', # Para Deploy
 ]
 
 ROOT_URLCONF = 'buscadorconocimiento.urls'
